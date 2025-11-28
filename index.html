@@ -464,7 +464,22 @@ function submitQuiz(){
                   <p><b>Correct:</b> ${correct}</p>
                   <p><b>Wrong:</b> ${wrong}</p>
                   <p><b>Skipped:</b> ${skipped}</p>
-                  <p><b>Score:</b> ${score}%</p>`;
+                  <p><b>Score:</b> ${score}%</p>
+    <button onclick="goBackToSelectTest()"
+    style="
+      padding:12px 28px;
+      background:#007bff;
+      color:#fff;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+      width:100%;
+      max-width:300px;
+    ">
+    ⬅ Back to Select Test
+</button> ` ;
 
   renderQuestion();
   sendResultsToForm(userMobile, selectedQuizName, score, correct, wrong, skipped);
