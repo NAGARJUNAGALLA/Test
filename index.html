@@ -129,9 +129,7 @@ window.MathJax = {
     <div id="question-container"></div>
 
     <div id="result-section">
-      <!-- BACK TO SELECT TEST BUTTON -->
-<div style="text-align:center; margin-top:20px;">
-  <button onclick="goBackToSelectTest()"
+      <button onclick="goBackToSelectTest()"
     style="
       padding:12px 28px;
       background:#007bff;
@@ -141,9 +139,12 @@ window.MathJax = {
       font-size:16px;
       font-weight:600;
       cursor:pointer;
+      width:100%;
+      max-width:300px;
     ">
     ⬅ Back to Select Test
-  </button>
+</button>
+
 </div>
 
     </div>
@@ -525,16 +526,17 @@ loadQuestionsFromSheet();
 function goBackToSelectTest() {
   // Hide quiz screens
   document.getElementById("quizScreen").style.display = "none";
-  document.getElementById("reviewScreen").style.display = "none";
-  document.getElementById("resultScreen").style.display = "none";
+  document.getElementById("result-section").style.display = "none"; // corrected
 
   // Show the select test screen again
   document.getElementById("selectScreen").style.display = "block";
 
-  // Clear previous selections (optional)
-  // subjectSelect.value = "";
-  // testSelect.innerHTML = "";
+  // Optional: reset current quiz state
+  answers = [];
+  current = 0;
+  submitted = false;
 }
+
 
 
 </script>
