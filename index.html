@@ -33,7 +33,7 @@ window.MathJax = {
   .question-nav button.answered { background:#1b4332; color:#fff; }
   .quiz-footer { display:flex; justify-content:space-between; margin-top:20px; position:fixed; left:0; right:0; bottom:8px; max-width:900px; margin-left:auto; margin-right:auto; padding:0 20px; box-sizing:border-box; }
   .quiz-footer button { flex:1; margin:0 6px; padding:12px; border-radius:8px; }
-  #result-section { margin-top:20px; padding:30px; border-radius:8px; background:#f9f9f9; display:none; }
+  #result-section { margin-top:20px; margin-bottom:30px;padding:30px; border-radius:8px; background:#f9f9f9; display:none; }
   #timer { font-weight:700; color:#c0392b; }
   .hidden { display:none; }
   .topbar { display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; }
@@ -127,21 +127,6 @@ window.MathJax = {
     <div class="question-nav" id="question-nav"></div>
 
     <div id="question-container"></div>
-<button onclick="goBackToSelectTest()"
-    style="
-      padding:12px 28px;
-      background:#007bff;
-      color:#fff;
-      border:none;
-      border-radius:8px;
-      font-size:16px;
-      font-weight:600;
-      cursor:pointer;
-      width:100%;
-      max-width:300px;
-    ">
-    ⬅ Back to Select Test
-</button>
     <div id="result-section">
       <button onclick="goBackToSelectTest()"
     style="
