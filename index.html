@@ -128,8 +128,25 @@ window.MathJax = {
 
     <div id="question-container"></div>
 
-    <div id="result-section"></div>
-<p><button onclick="goBackToSelection()" style="background:#333;color:#fff;padding:10px 18px;border-radius:8px;">Back to Test Selection</button></p>
+    <div id="result-section">
+      <!-- BACK TO SELECT TEST BUTTON -->
+<div style="text-align:center; margin-top:20px;">
+  <button onclick="goBackToSelectTest()"
+    style="
+      padding:12px 28px;
+      background:#007bff;
+      color:#fff;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+    ">
+    ⬅ Back to Select Test
+  </button>
+</div>
+
+    </div>
 
   </div>
 
@@ -505,24 +522,20 @@ function escapeHtml(str){
 
 /* ============= INITIAL LOAD =========== */
 loadQuestionsFromSheet();
-function goBackToSelection(){
-  // hide quiz screen
-  document.getElementById("quiz-area").style.display = "none";
+function goBackToSelectTest() {
+  // Hide quiz screens
+  document.getElementById("quizScreen").style.display = "none";
+  document.getElementById("reviewScreen").style.display = "none";
+  document.getElementById("resultScreen").style.display = "none";
 
-  // show the subject + test selection screen
+  // Show the select test screen again
   document.getElementById("selectScreen").style.display = "block";
 
-  // reset submission section
-  document.getElementById("result-section").style.display = "none";
-
-  // stop timer if running
-  if(timerInterval){
-    clearInterval(timerInterval);
-    timerInterval = null;
-  }
-
-  submitted = false;
+  // Clear previous selections (optional)
+  // subjectSelect.value = "";
+  // testSelect.innerHTML = "";
 }
+
 
 </script>
 </body>
